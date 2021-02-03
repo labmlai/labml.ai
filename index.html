@@ -6,22 +6,24 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>LabML</title>
-    <meta name="description" content="Organize machine learning experiments and monitor training progress from mobile.">
+    <meta content="Organize machine learning experiments and monitor training progress from mobile." name="description">
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
           rel="stylesheet">
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+          integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" rel="stylesheet">
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,7 +31,7 @@
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
 
 </head>
 <body>
@@ -38,7 +40,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <header class="container">
-    <a href="javascript:void(0);" class="navbar-icon" onclick="triggerNavBar()">&#9776;</a>
+    <a class="navbar-icon" href="javascript:void(0);" onclick="triggerNavBar()">&#9776;</a>
     <nav class="navbar" id="topNav">
         <div class="left">
             <img class="logo-icon" src="images/logo.png">
@@ -47,10 +49,9 @@
             <a href="#features">Features</a>
             <a href="#nn">Paper Implementations</a>
             <a href="#contact">Get in Touch</a>
-            <a href="https://lab-ml.com">Docs</a>
         </div>
         <div class="right">
-            <a href="https://web.lab-ml.com" class="btn sm" target="_blank">Login</a>
+            <a class="btn sm" href="https://web.lab-ml.com" target="_blank">Docs</a>
         </div>
 
     </nav>
@@ -63,6 +64,66 @@
         </div>
     </div>
 </header>
+
+<div class="container">
+    <div class="content">
+        <h3>Our Benefits</h3>
+        <div class="row">
+            <div class="row-item">
+                <i class="fas fa-mobile-alt f-60"></i>
+                <div class="title">Monitor from Mobile</div>
+                <div class="description"> Easily monitor your experiments from a mobile first web app</div>
+            </div>
+            <div class="row-item">
+                <i class="fab fa-github f-60"></i>
+                <div class="title">Open Source</div>
+                <div class="description"> Everything is open source. We also have a small hosted server for the mobile
+                    web app
+                </div>
+            </div>
+            <div class="row-item">
+                <i class="fas fa-chart-line f-60"></i>
+                <div class="title">Custom Visualizations</div>
+                <div class="description"> Easy to use API to generate your own custom visualizations.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-item">
+                <i class="fas fa-terminal f-60"></i>
+                <div class="title">Pretty Logs</div>
+                <div class="description"> Nice to look logs for your training progress and other console outputs.</div>
+            </div>
+            <div class="row-item">
+                <i class="fas fa-map-marker-alt f-60"></i>
+                <div class="title">Save & Load Checkpoints</div>
+                <div class="description"> Easily save & load checkpoints to help you with fine tuning your ML Model
+                </div>
+            </div>
+            <div class="row-item">
+                <i class="fas fa-tachometer-alt f-60"></i>
+                <div class="title">Local Dashboard</div>
+                <div class="description"> Local dashboard to browse and manage your experiments</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container">
+    <div class="row">
+        <a class="row-item" href="https://github.com/lab-ml/">
+            <span class="fas fa-github f-40"></span>
+            <div class="title-small">Github</div>
+        </a>
+        <a class="row-item" href="https://twitter.com/labmlai">
+            <span class="fab fa-twitter f-40"></span>
+            <div class="title-small">Twitter</div>
+        </a>
+        <a class="row-item" href="https://join.slack.com/t/labforml/shared_invite/zt-egj9zvq9-Dl3hhZqobexgT7aVKnD14g/">
+            <span class="fab fa-slack f-40"></span>
+            <div class="title-small">Slack</div>
+        </a>
+    </div>
+</footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

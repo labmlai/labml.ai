@@ -27,6 +27,7 @@ html body {
     max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 45px;
 }
 
 .content {
@@ -36,6 +37,49 @@ html body {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1000px;
+    margin-bottom: 50px;
+}
+
+footer.container {
+    padding: 25px 0;
+}
+
+footer .row {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.row-item {
+    padding: 0 15px;
+    text-align: center;
+    flex: 1;
+}
+
+.row-item .title {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--typography-primary);
+}
+
+.row-item .title-small {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: var(--typography-primary);
 }
 
 .container .action {
@@ -64,6 +108,14 @@ h1 {
     margin: 0;
 }
 
+h3 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 700;
+    color: var(--typography-primary);
+    margin-bottom: 45px;
+}
+
 .subheading {
     max-width: 51%;
     color: var(--typography-secondary);
@@ -71,6 +123,29 @@ h1 {
     line-height: 32px;
     margin-top: 30px;
     text-align: center;
+}
+
+.row-item .description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--typography-secondary);
+}
+
+/* Font Awesome */
+
+.fas, .fab {
+    color: var(--accent-primary);
+}
+
+.f-60 {
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.f-40 {
+    font-size: 40px;
+    line-height: 50px;
 }
 
 /* Navigation bar */
