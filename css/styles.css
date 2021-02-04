@@ -16,7 +16,7 @@ html body {
     /* Hover Colors */
     --accent-primary-hover: #CF2E1E;
     --accent-secondary-hover: #BCC4C4;
-    --typography-primary-hover: #293241;
+    --typography-primary-hover: #45556e;
     --typography-secondary-hover: #A8ACB1;
     --typography-on-accent-primary-hover: #FFF;
     --typography-on-accent-secondary-hover: #FFF;
@@ -89,7 +89,6 @@ footer .row {
     font-size: 16px;
     font-weight: 400;
     line-height: 40px;
-    color: var(--typography-primary);
 }
 
 .container .action {
@@ -147,10 +146,27 @@ h3 {
     color: var(--typography-secondary);
 }
 
+a {
+    text-decoration: none;
+    color: var(--typography-primary);
+}
+
+a:hover, a:hover div {
+    color: var(--typography-primary-hover);
+}
+
+a:hover .color-primary {
+    color: var(--accent-primary-hover);
+}
+
 /* Font Awesome */
 
 .fas, .fab {
     color: var(--accent-primary);
+}
+
+a .fas:hover, a .fab:hover {
+    color: var(--accent-primary-hover);
 }
 
 .f-60 {
@@ -182,7 +198,6 @@ h3 {
     color: var(--typography-secondary);
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 18px;
     line-height: 18px;
     font-weight: 500;
@@ -210,6 +225,11 @@ h3 {
     text-decoration: none;
 }
 
+.btn:hover {
+    background-color: var(--accent-primary-hover);
+    color: var(--typography-on-accent-primary-hover) !important;
+}
+
 .btn.sm {
     padding: 11px 15px;
     font-size: 18px;
@@ -232,6 +252,10 @@ h3 {
     font-size: 18px;
     line-height: 28px;
     text-decoration: none;
+}
+
+.link:hover {
+    color: var(--accent-primary-hover);
 }
 
 
