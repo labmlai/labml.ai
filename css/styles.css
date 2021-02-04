@@ -291,7 +291,7 @@ a .fas:hover, a .fab:hover {
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: var(--accent-secondary);
+    background-color: var(--accent-primary);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -313,8 +313,8 @@ a .fas:hover, a .fab:hover {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: var(--accent-primary);
-    color: var(--typography-on-accent-primary);
+    background-color: var(--accent-primary-hover);
+    color: var(--typography-on-accent-primary-hover);
 }
 
 /* Create an active/current tablink class */
@@ -326,7 +326,7 @@ a .fas:hover, a .fab:hover {
 /* Style the code samples */
 .tab-content {
     display: none;
-    border: 1px solid #ccc;
+    border: 1px solid var(--accent-secondary);
     border-left: none;
     flex: 1;
     overflow: hidden;
