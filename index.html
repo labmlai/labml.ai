@@ -24,10 +24,14 @@
     <link href="css/styles.css" rel="stylesheet">
     <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
           integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" rel="stylesheet">
+    <link href="css/codestyle.night-owl.css"
+          rel="stylesheet">
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/site.js"></script>
+    <script src="js/highlight.pypack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -67,7 +71,78 @@
 
 <div class="container">
     <div class="content">
-        <h3>Our Benefits</h3>
+        <img alt="Screenshots of Web App" src="images/cover.png"/>
+    </div>
+</div>
+
+<div class="container">
+    <h3>Integrate with just 2 lines</h3>
+    <div class="content-row">
+        <div class="tab">
+            <button class="tab-link active" onclick="openSample(this, 'PyTorch')">PyTorch</button>
+            <button class="tab-link" onclick="openSample(this, 'Lightning')">PyTorch<br>Lightning</button>
+            <button class="tab-link" onclick="openSample(this, 'Keras')">Keras</button>
+        </div>
+
+        <div class="tab-content" id="PyTorch" style="display: block">
+            <pre>
+                <code><span class="code-low">from numpy.random import random</span>
+<span class="code-high">from labml import tracker, experiment as exp</span>
+
+<span class="code-low">conf = {'batch_size': 20}
+
+def train(n:int):
+    loss = 0.999 ** n + random() / 10
+    accuracy = 1 - 0.999 ** n + random() / 10
+
+    return loss, accuracy</span>
+
+<span class="code-high">with exp.record(name='sample', exp_conf=conf):</span>
+<span class="code-low">    for i in range(100000):
+        lss, acc = train(i)</span>
+<span class="code-high">        tracker.save(i, loss=lss, accuracy=acc)</span>
+                </code>
+            </pre>
+        </div>
+
+        <div class="tab-content" id="Lightning">
+            <pre>
+                <code><span class="code-high">from labml import experiment as exp
+from labml.utils.lightning import LabMLLightningLogger </span>
+
+<span class="code-low">trainer = pl.Trainer(gpus=1,
+                     max_epochs=5,
+                     progress_bar_refresh_rate=20,</span>
+<span class="code-high">                     logger=LabMLLightningLogger())</span>
+
+<span class="code-high">with exp.record(name='sample', exp_conf=conf):</span>
+<span class="code-low">        trainer.fit(model, data_loader)</span>
+                </code>
+            </pre>
+        </div>
+
+        <div class="tab-content" id="Keras">
+            <pre>
+                <code><span class="code-high">from labml import experiment as exp
+from labml.utils.keras import LabMLKerasCallback</span>
+
+<span class="code-high">with exp.record(name='sample', exp_conf=conf):</span>
+<span class="code-low">    for i in range(50):
+        model.fit(x_train,
+                  y_train,
+                  epochs=conf['epochs'],
+                  validation_data=(x_test, y_test),</span>
+<span class="code-high">                  callbacks=[LabMLKerasCallback()],</span>
+<span class="code-low">                  verbose=None)</span>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="features">
+    <div class="content">
+        <h3>Our Features</h3>
         <div class="row">
             <div class="row-item">
                 <i class="fas fa-mobile-alt f-60"></i>
@@ -111,7 +186,7 @@
 <footer class="container">
     <div class="row">
         <a class="row-item" href="https://github.com/lab-ml/">
-            <span class="fas fa-github f-40"></span>
+            <span class="fab fa-github f-40"></span>
             <div class="title-small">Github</div>
         </a>
         <a class="row-item" href="https://twitter.com/labmlai">
