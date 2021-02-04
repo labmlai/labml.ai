@@ -1,6 +1,8 @@
 html body {
     font-family: "DM Sans", -apple-system, "HelveticaNeue", "Helvetica Neue", Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
+    position: absolute;
+    width: 100vw;
 }
 
 /* Theming */
@@ -212,8 +214,9 @@ a .fas:hover, a .fab:hover {
 }
 
 .logo-icon {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
+    padding: 30px;
 }
 
 /* Links */
@@ -284,6 +287,35 @@ a .fas:hover, a .fab:hover {
         float: none;
         display: block;
         text-align: left;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .subheading {
+        max-width: 80%;
+        margin-top: 15px;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+    h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .content-row {
+        width: unset;
+        padding-top: 15px;
+        flex-direction: column;
+    }
+
+    .tab {
+        flex-direction: row !important;
+    }
+    code {
+        font-size: 11px;
     }
 }
 
