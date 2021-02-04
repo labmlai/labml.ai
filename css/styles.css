@@ -296,6 +296,7 @@ a .fas:hover, a .fab:hover {
     .subheading {
         max-width: 80%;
         margin-top: 15px;
+        font-size: 20px;
     }
 
     h1 {
@@ -304,6 +305,7 @@ a .fas:hover, a .fab:hover {
     h3 {
         font-size: 28px;
         margin-bottom: 15px;
+        margin-top: 15px;
     }
     .content-row {
         width: unset;
@@ -316,6 +318,32 @@ a .fas:hover, a .fab:hover {
     }
     code {
         font-size: 11px;
+    }
+
+    .row {
+        width: unset;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .row-item .title {
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .row-item .description {
+        margin-bottom: 32px;
+        padding: 0 32px;
+    }
+    .container {
+        padding-bottom: 30px;
+    }
+    .container .action {
+        margin-top: 50px;
+    }
+
+    footer .row {
+        flex-direction: row;
     }
 }
 
