@@ -263,7 +263,7 @@ a .fas:hover, a .fab:hover {
 
 
 /* Responsive Adjustment */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 950px) {
     .navbar a {
         display: none;
     }
@@ -324,6 +324,7 @@ a .fas:hover, a .fab:hover {
         width: unset;
         flex-direction: column;
         margin-bottom: 15px;
+        align-items: center;
     }
 
     .row-item .title {
