@@ -308,7 +308,7 @@ a .fas:hover, a .fab:hover {
         margin-top: 15px;
     }
     .content-row {
-        width: unset;
+        width: 70%;
         padding-top: 15px;
         flex-direction: column;
     }
@@ -317,7 +317,7 @@ a .fas:hover, a .fab:hover {
         flex-direction: row !important;
     }
     code {
-        font-size: 11px;
+        font-size: 15px;
     }
 
     .row {
@@ -345,6 +345,21 @@ a .fas:hover, a .fab:hover {
 
     footer .row {
         flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    code {
+        font-size: 13px;
+    }
+    .content-row {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    code {
+        font-size: 11px;
     }
 }
 
