@@ -99,7 +99,7 @@ footer .row {
 }
 
 header {
-    height: 82vh;
+    height: 46vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,7 +111,7 @@ header .content {
 }
 
 img {
-    width: 100%;
+    width: 95%;
     height: 100%;
 }
 
@@ -214,8 +214,8 @@ a .fas:hover, a .fab:hover {
 }
 
 .logo-icon {
-    width: 120px;
-    height: 120px;
+    width: 86px;
+    height: 86px;
     padding: 30px;
 }
 
