@@ -41,6 +41,7 @@ html body {
     align-items: center;
     width: 100%;
 }
+
 .content-row {
     padding: 0 15px;
     display: flex;
@@ -302,22 +303,36 @@ a .fas:hover, a .fab:hover {
     h1 {
         font-size: 64px;
     }
+
     h3 {
         font-size: 28px;
         margin-bottom: 15px;
         margin-top: 15px;
     }
+
     .content-row {
-        width: 70%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
         padding-top: 15px;
         flex-direction: column;
     }
 
     .tab {
         flex-direction: row !important;
+        justify-content: center !important;
     }
+
+    .tab, .tab-content code {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
     code {
         font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.3em;
     }
 
     .row {
@@ -336,9 +351,11 @@ a .fas:hover, a .fab:hover {
         margin-bottom: 32px;
         padding: 0 32px;
     }
+
     .container {
         padding-bottom: 30px;
     }
+
     .container .action {
         margin-top: 50px;
     }
@@ -352,6 +369,7 @@ a .fas:hover, a .fab:hover {
     code {
         font-size: 13px;
     }
+
     .content-row {
         width: unset;
     }
@@ -406,20 +424,25 @@ a .fas:hover, a .fab:hover {
     border-left: none;
     flex: 1;
     overflow: hidden;
+    background-color: #011627;
 }
 
 .code-low {
     opacity: 0.3;
 }
+
 .code-high {
     font-weight: 600;
 }
+
 pre {
     margin: 0;
     display: grid;
     text-align: start;
 }
+
 code.hljs {
     height: 100%;
     padding: 1em;
+    font-family: 'Source Code Pro', monospace;
 }

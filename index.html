@@ -15,7 +15,7 @@
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
           rel="stylesheet">
 
     <!-- CSS
@@ -44,21 +44,21 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <header class="container">
-<!--    <a class="navbar-icon" href="javascript:void(0);" onclick="triggerNavBar()">&#9776;</a>
-    <nav class="navbar" id="topNav">
-        <div class="left">
-            <img class="logo-icon" src="images/logo.png">
-        </div>
-        <div class="center">
-            <a href="#features">Features</a>
-            <a href="#nn">Paper Implementations</a>
-            <a href="#contact">Get in Touch</a>
-        </div>
-        <div class="right">
-            <a class="btn sm" href="https://web.lab-ml.com" target="_blank">Docs</a>
-        </div>
+    <!--    <a class="navbar-icon" href="javascript:void(0);" onclick="triggerNavBar()">&#9776;</a>
+        <nav class="navbar" id="topNav">
+            <div class="left">
+                <img class="logo-icon" src="images/logo.png">
+            </div>
+            <div class="center">
+                <a href="#features">Features</a>
+                <a href="#nn">Paper Implementations</a>
+                <a href="#contact">Get in Touch</a>
+            </div>
+            <div class="right">
+                <a class="btn sm" href="https://web.lab-ml.com" target="_blank">Docs</a>
+            </div>
 
-    </nav>-->
+        </nav>-->
     <div class="content">
         <img class="logo-icon" src="images/logo.png">
         <h1>LabML</h1>
@@ -74,10 +74,10 @@
 
 <div class="container" id="sample-code">
     <h3>Integrate with just 2 lines</h3>
-<!--    <div class="action">
-        <a class="btn lg" href="https://web.lab-ml.com">Try Now</a> <br>
-&lt;!&ndash;        <a class="link" href="https://lab-ml.com/">Learn More</a>&ndash;&gt;
-    </div>-->
+    <!--    <div class="action">
+            <a class="btn lg" href="https://web.lab-ml.com">Try Now</a> <br>
+    &lt;!&ndash;        <a class="link" href="https://lab-ml.com/">Learn More</a>&ndash;&gt;
+        </div>-->
     <div class="content-row">
         <div class="tab">
             <button class="tab-link active" onclick="openSample(this, 'PyTorch')">PyTorch</button>
@@ -152,21 +152,27 @@ from labml.utils.keras import LabMLKerasCallback</span>
             <div class="row-item">
                 <i class="fab fa-github f-60"></i>
                 <div class="title">Open Source</div>
-                <div class="description"> Everything is open source. We also have a small hosted server for the mobile
-                    web app
+                <div class="description"> We are on Github and anyone can contribute
                 </div>
             </div>
             <div class="row-item">
-                <i class="fas fa-chart-line f-60"></i>
-                <div class="title">Custom Visualizations</div>
-                <div class="description"> Easy to use API to generate your own custom visualizations.</div>
+                <i class="fas fa-file-contract f-60"></i>
+                <div class="title">Track commits, configs & hyper-parameters</div>
+                <div class="description"> Keep track of all experiment information, including git commits,
+                    configurations and hyper-parameters
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="row-item">
+                <i class="fas fa-chart-line f-60"></i>
+                <div class="title">Custom Visualizations</div>
+                <div class="description"> Easy to use API to generate your own custom visualizations</div>
+            </div>
+            <div class="row-item">
                 <i class="fas fa-terminal f-60"></i>
                 <div class="title">Pretty Logs</div>
-                <div class="description"> Nice to look logs for your training progress and other console outputs.</div>
+                <div class="description"> Logs for the progress and any other outputs</div>
             </div>
             <div class="row-item">
                 <i class="fas fa-map-marker-alt f-60"></i>
@@ -174,25 +180,27 @@ from labml.utils.keras import LabMLKerasCallback</span>
                 <div class="description"> Easily save & load checkpoints to help you with fine tuning your ML Model
                 </div>
             </div>
-            <div class="row-item">
-                <i class="fas fa-tachometer-alt f-60"></i>
-                <div class="title">Local Dashboard</div>
-                <div class="description"> Local dashboard to browse and manage your experiments</div>
-            </div>
+            <!--            <div class="row-item">
+                            <i class="fas fa-tachometer-alt f-60"></i>
+                            <div class="title">Local Dashboard</div>
+                            <div class="description"> Local dashboard to browse and manage your experiments</div>
+                        </div>-->
         </div>
     </div>
 </div>
 
-<div class="container" id="nn" >
+<div class="container" id="nn">
     <div class="content">
         <h3>Collection of paper implementations/tutorials</h3>
-        <div class="subheading">Minimal implementations/tutorials with side-by-side notes; including transformers, optimizers, gans, reinforcement learning, capsnet, sketch-rnn.</div>
+        <div class="subheading">Minimal implementations/tutorials with side-by-side notes; including transformers,
+            optimizers, gans, reinforcement learning, capsnet, sketch-rnn.
+        </div>
         <div class="action">
             <a class="btn lg" href="https://nn.labml.ai/">Check Now</a> <br>
         </div>
     </div>
 </div>
-<div class="container" id="contact" >
+<div class="container" id="contact">
     <div class="content">
         <h3>Join our slack</h3>
         <div class="subheading">Reach us via slack to discuss and with the developers and community</div>
