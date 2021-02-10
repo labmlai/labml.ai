@@ -100,8 +100,8 @@ footer .row {
 }
 
 header {
-    height: 24vh;
-    max-width: 40vh;
+    height: auto;
+    max-height: 46vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,12 +112,6 @@ header .content {
     flex-grow: 1;
 }
 
-header .subheading {
-    color: var(--typography-primary);
-    font-weight: 500;
-    font-size: 25px;
-}
-
 img {
     width: 95%;
     height: 100%;
@@ -125,8 +119,8 @@ img {
 
 /* Typography */
 h1 {
-    font-size: 72px;
-    line-height: 86px;
+    font-size: 58px;
+    line-height: 62px;
     font-weight: 700;
     color: var(--typography-primary);
     margin: 0;
@@ -222,10 +216,10 @@ a .fas:hover, a .fab:hover {
 }
 
 .logo-icon {
-    max-width: 150px;
-    max-height: 150px;
-    height: auto;
     width: auto;
+    height: auto;
+    max-width: 75px;
+    max-height: 75px;
     padding: 30px;
 }
 
