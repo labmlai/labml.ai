@@ -100,7 +100,8 @@ footer .row {
 }
 
 header {
-    height: 46vh;
+    height: 24vh;
+    max-width: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -109,6 +110,12 @@ header {
 
 header .content {
     flex-grow: 1;
+}
+
+header .subheading {
+    color: var(--typography-primary);
+    font-weight: 500;
+    font-size: 25px;
 }
 
 img {
@@ -215,8 +222,10 @@ a .fas:hover, a .fab:hover {
 }
 
 .logo-icon {
-    width: 86px;
-    height: 86px;
+    max-width: 150px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
     padding: 30px;
 }
 
