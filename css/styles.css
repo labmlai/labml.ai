@@ -449,3 +449,8 @@ code.hljs {
     padding: 1em;
     font-family: 'Source Code Pro', monospace;
 }
+
+#sample-code .action {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
