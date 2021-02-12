@@ -11,7 +11,7 @@ html body {
     --accent-primary: #E34C3D;
     --accent-secondary: #BCC4C4;
     --typography-primary: #293241;
-    --typography-secondary: #8D9299;
+    --typography-secondary: #696A72;
     --typography-on-accent-primary: #FFF;
     --typography-on-accent-secondary: #FFF;
 
@@ -95,7 +95,8 @@ footer .row {
 }
 
 .container .action {
-    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -135,12 +136,12 @@ h3 {
 }
 
 .subheading {
-    max-width: 51%;
+    max-width: 80%;
     color: var(--typography-secondary);
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 32px;
     margin-top: 30px;
     text-align: center;
+    line-height: 1.2;
 }
 
 .row-item .description {
@@ -220,7 +221,7 @@ a .fas:hover, a .fab:hover {
     height: auto;
     max-width: 75px;
     max-height: 75px;
-    padding: 30px;
+    padding: 30px 30px 0;
 }
 
 /* Links */
@@ -298,13 +299,13 @@ a .fas:hover, a .fab:hover {
     }
 
     .subheading {
-        max-width: 80%;
+        max-width: 95%;
         margin-top: 15px;
-        font-size: 20px;
+        font-size: 28px;
     }
 
     h1 {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     h3 {
@@ -360,7 +361,8 @@ a .fas:hover, a .fab:hover {
     }
 
     .container .action {
-        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     footer .row {
@@ -375,6 +377,13 @@ a .fas:hover, a .fab:hover {
 
     .content-row {
         width: unset;
+    }
+
+    .subheading {
+        font-size: 22px;
+}
+    header.container {
+        padding-bottom: 20px;
     }
 }
 
