@@ -381,7 +381,7 @@ a .fas:hover, a .fab:hover {
 
     .subheading {
         font-size: 22px;
-}
+    }
     header.container {
         padding-bottom: 20px;
     }
@@ -451,6 +451,7 @@ pre {
     margin: 0;
     display: grid;
     text-align: start;
+    overflow: hidden;
 }
 
 code.hljs {
@@ -459,7 +460,14 @@ code.hljs {
     font-family: 'Source Code Pro', monospace;
 }
 
-#sample-code .action {
-    margin-top: 0;
-    margin-bottom: 40px;
+.sample-banner {
+    border-top: 1px solid #bcc4c44d;
+    background-color: #bcc4c44d;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: auto;
 }
