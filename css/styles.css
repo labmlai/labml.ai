@@ -387,6 +387,14 @@ a .fas:hover, a .fab:hover {
     footer .row {
         flex-direction: row;
     }
+
+    .btn.lg {
+        padding: 10px 30px;
+        font-size: 20px;
+        font-weight: 600;
+        min-width: 95px;
+        /*width: auto;*/
+    }
 }
 
 @media screen and (max-width: 650px) {
