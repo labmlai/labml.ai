@@ -100,6 +100,11 @@ footer .row {
     text-align: center;
 }
 
+.action > * {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 header {
     height: auto;
     max-height: 46vh;
@@ -226,30 +231,44 @@ a .fas:hover, a .fab:hover {
 
 /* Links */
 .btn {
-    background-color: var(--accent-primary);
-    color: var(--typography-on-accent-primary) !important;
     border: none;
     border-radius: 50px;
     text-decoration: none;
+    display: inline-block;
 }
 
-.btn:hover {
+.btn.full {
+    background-color: var(--accent-primary);
+    border: 3px solid var(--accent-primary);
+    color: var(--typography-on-accent-primary) !important;
+}
+
+.btn.full:hover {
     background-color: var(--accent-primary-hover);
     color: var(--typography-on-accent-primary-hover) !important;
+}
+
+.btn.sub {
+    border: 3px solid var(--accent-primary);
+    color: var(--accent-primary);
+}
+.btn.sub:hover {
+    background-color: #e34c3d66;
+    color: var(--accent-primary-hover);
 }
 
 .btn.sm {
     padding: 11px 15px;
     font-size: 18px;
     font-weight: 500;
-    line-height: 18px;
 }
 
 .btn.lg {
     padding: 20px 40px;
     font-size: 20px;
-    line-height: 60px;
     font-weight: 600;
+    min-width: 95px;
+    /*width: auto;*/
 }
 
 .link {
@@ -382,6 +401,7 @@ a .fas:hover, a .fab:hover {
     .subheading {
         font-size: 22px;
     }
+
     header.container {
         padding-bottom: 20px;
     }
@@ -461,13 +481,15 @@ code.hljs {
 }
 
 .sample-banner {
-    border-top: 1px solid #bcc4c44d;
-    background-color: #bcc4c44d;
+    /*border-top: 1px solid #bcc4c44d;*/
+    /*background-color: #bcc4c44d;*/
+    box-sizing: border-box;
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
-    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
     padding-bottom: 8px;
     margin-top: auto;
 }
