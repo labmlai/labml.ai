@@ -67,6 +67,7 @@ footer.container {
 
 footer .row {
     width: 400px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
@@ -423,6 +424,12 @@ a:hover .fas, a:hover .fab {
 @media screen and (max-width: 400px) {
     code {
         font-size: 11px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    header {
+        max-height: 340px;
     }
 }
 
