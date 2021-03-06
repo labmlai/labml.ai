@@ -123,6 +123,13 @@ img {
     height: 100%;
 }
 
+.logo-text {
+    max-width: 130px;
+    width: auto;
+    height: auto;
+    margin: 16px 8px 8px;
+}
+
 /* Typography */
 h1 {
     font-size: 58px;
@@ -225,14 +232,6 @@ a:hover .fas, a:hover .fab {
 
 .navbar-icon {
     display: none;
-}
-
-.logo-icon {
-    width: auto;
-    height: auto;
-    max-width: 75px;
-    max-height: 75px;
-    padding: 30px 30px 0;
 }
 
 /* Links */
