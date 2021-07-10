@@ -46,7 +46,7 @@
     <meta content="https://labml.ai/images/seo-cover.jpg" property="og:image"/>
     <meta content="Screenshots of LabML Web App" property="og:image:alt"/>
     <meta content="410956776644881" property="fb:app_id"/>
-    <meta name="facebook-domain-verification" content="hs4l74n4hxrpnypp0ldlknagou2qs6" />
+    <meta content="hs4l74n4hxrpnypp0ldlknagou2qs6" name="facebook-domain-verification"/>
 
     <script type="application/ld+json">
         [
@@ -108,185 +108,76 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <header class="container">
-    <!--    <a class="navbar-icon" href="javascript:void(0);" onclick="triggerNavBar()">&#9776;</a>
-        <nav class="navbar" id="topNav">
-            <div class="left">
-                <img class="logo-icon" src="images/logo.svg">
-            </div>
-            <div class="center">
-                <a href="#features">Features</a>
-                <a href="#nn">Paper Implementations</a>
-                <a href="#contact">Get in Touch</a>
-            </div>
-            <div class="right">
-                <a class="btn full sm" href="https://web.lab-ml.com" target="_blank">Docs</a>
-            </div>
-
-        </nav>-->
-    <div class="content">
-        <img class="logo-text" src="images/logo-text.svg">
-        <div class="subheading">Organize machine learning experiments and monitor training progress from mobile.</div>
-        <div class="action">
-            <a class="btn full lg"
-               href="https://colab.research.google.com/github/lab-ml/samples/blob/master/labml_samples/pytorch/mnist/mnist.ipynb"
-               target="_blank">Try Now</a>
-            <a class="btn sub lg" href="https://app.labml.ai/run/baa210086cdb11eb861b0242ac1c0002"
-               target="_blank">Sample</a>
+    <img class="mobile logo-text" src="images/logo-text.svg">
+    <a class="navbar-icon" href="javascript:void(0);" onclick="triggerNavBar()">&#9776;</a>
+    <nav class="navbar" id="topNav">
+        <div class="left">
+            <!--                <img class="logo-icon" src="images/logo.svg">-->
+            <img class="logo-text" src="images/logo-text.svg">
         </div>
-    </div>
+        <div class="right">
+            <a href="#app">App</a>
+            <a href="#nn">Paper Implementations</a>
+            <a href="#papers">Research Papers</a>
+            <a href="#consultancy">Consultancy</a>
+        </div>
+        <!--<div class="right">
+            <a class="btn full sm" href="https://web.lab-ml.com" target="_blank">Docs</a>
+        </div>-->
+
+    </nav>
 </header>
 
-<div class="container">
-    <div class="content">
-        <img alt="Screenshots of Web App" src="images/cover.png"/>
-    </div>
-</div>
-
-<div class="container" id="sample-code">
-    <h3>Integrate with just 2 lines</h3>
-    <div class="content-row">
-        <div class="tab">
-            <button class="tab-link active" onclick="openSample(this, 'PyTorch')">PyTorch</button>
-            <button class="tab-link" onclick="openSample(this, 'Lightning')">PyTorch<br>Lightning</button>
-            <button class="tab-link" onclick="openSample(this, 'Keras')">Keras</button>
-        </div>
-
-        <div class="tab-content" id="PyTorch" style="display: block">
-            <pre>
-                <code><span class="code-low">from numpy.random import random</span>
-<span class="code-high">from labml import tracker, experiment as exp</span>
-
-<span class="code-low">conf = {'batch_size': 20}
-
-def train(n:int):
-    loss = 0.999 ** n + random() / 10
-    accuracy = 1 - 0.999 ** n + random() / 10
-    return loss, accuracy</span>
-
-<span class="code-high">with exp.record(name='sample', exp_conf=conf):</span>
-<span class="code-low">    for i in range(100000):
-        lss, acc = train(i)</span>
-<span class="code-high">        tracker.save(i, loss=lss, accuracy=acc)</span>
-                </code>
-            </pre>
-            <div class="sample-banner">
-                <a href="https://colab.research.google.com/github/lab-ml/samples/blob/master/labml_samples/pytorch/mnist/mnist.ipynb"
-                   rel="nofollow" target="_blank"><img alt="Open In Colab"
-                                                       src="https://colab.research.google.com/assets/colab-badge.svg"></a>
+<a href="https://app.labml.ai">
+    <div class="container" id="app">
+        <img class="logo-icon" src="images/logo.svg">
+        <div class="content">
+            <div class="subheading">Organize machine learning experiments and monitor training progress from mobile.
             </div>
         </div>
-
-        <div class="tab-content" id="Lightning">
-            <pre>
-                <code><span class="code-high">from labml import experiment as exp
-from labml.utils.lightning import LabMLLightningLogger </span>
-
-<span class="code-low">trainer = pl.Trainer(gpus=1,
-                     max_epochs=5,
-                     progress_bar_refresh_rate=20,</span>
-<span class="code-high">                     logger=LabMLLightningLogger())</span>
-
-<span class="code-high">with exp.record(name='sample', exp_conf=conf):</span>
-<span class="code-low">        trainer.fit(model, data_loader)</span>
-                </code>
-            </pre>
-            <div class="sample-banner">
-                <a href="https://colab.research.google.com/github/lab-ml/samples/blob/master/labml_samples/lightning/mnist.ipynb"
-                   rel="nofollow" target="_blank"><img alt="Open In Colab"
-                                                       src="https://colab.research.google.com/assets/colab-badge.svg"></a>
-            </div>
-        </div>
-
-        <div class="tab-content" id="Keras">
-            <pre>
-                <code><span class="code-high">from labml import experiment as exp
-from labml.utils.keras import LabMLKerasCallback</span>
-
-<span class="code-high">with exp.record(name='sample', exp_conf=conf):</span>
-<span class="code-low">    for i in range(50):
-        model.fit(x_train,
-                  y_train,
-                  epochs=conf['epochs'],
-                  validation_data=(x_test, y_test),</span>
-<span class="code-high">                  callbacks=[LabMLKerasCallback()],</span>
-<span class="code-low">                  verbose=None)</span>
-                </code>
-            </pre>
-            <div class="sample-banner">
-                <a href="https://colab.research.google.com/github/lab-ml/samples/blob/master/labml_samples/keras/mnist.ipynb"
-                   rel="nofollow" target="_blank"><img alt="Open In Colab"
-                                                       src="https://colab.research.google.com/assets/colab-badge.svg"></a>
-            </div>
+        <div class="content">
+            <img alt="Screenshots of Web App" src="images/cover.png"/>
         </div>
     </div>
-</div>
+</a>
 
-<div class="container" id="features">
-    <div class="content">
-        <h3>Features</h3>
-        <div class="row">
-            <div class="row-item">
-                <i class="fas fa-mobile-alt f-60"></i>
-                <div class="title">Monitor from Mobile</div>
-                <div class="description"> Easily monitor your experiments from a mobile first web app</div>
-            </div>
-            <div class="row-item">
-                <i class="fab fa-github f-60"></i>
-                <div class="title">Open Source</div>
-                <div class="description"> We are on Github and anyone can contribute
-                </div>
-            </div>
-            <div class="row-item">
-                <i class="fas fa-file-contract f-60"></i>
-                <div class="title">Track commits, configs & hyper-parameters</div>
-                <div class="description"> Keep track of all experiment information, including git commits,
-                    configurations and hyper-parameters
-                </div>
-            </div>
+<a href="https://app.labml.ai">
+    <div class="container" id="nn">
+        <img class="logo-text" src="images/logo.svg">
+        <div class="content">
+            <div class="subheading">Annotated PyTorch Paper Implementations</div>
         </div>
-        <div class="row">
-            <div class="row-item">
-                <i class="fas fa-chart-line f-60"></i>
-                <div class="title">Custom Visualizations</div>
-                <div class="description"> Easy to use API to generate your own custom visualizations</div>
-            </div>
-            <div class="row-item">
-                <i class="fas fa-terminal f-60"></i>
-                <div class="title">Pretty Logs</div>
-                <div class="description"> Logs for the progress and any other outputs</div>
-            </div>
-            <div class="row-item">
-                <i class="fas fa-map-marker-alt f-60"></i>
-                <div class="title">Save & Load Checkpoints</div>
-                <div class="description"> Easily save & load checkpoints to help you with fine tuning your ML Model
-                </div>
-            </div>
-            <!--            <div class="row-item">
-                            <i class="fas fa-tachometer-alt f-60"></i>
-                            <div class="title">Local Dashboard</div>
-                            <div class="description"> Local dashboard to browse and manage your experiments</div>
-                        </div>-->
+        <div class="two-col-content">
+            <img alt="Screenshot of CFR" src="images/nn1.png"/>
+            <img alt="Screenshot of StyleGan Implementation" src="images/nn2.png"/>
         </div>
     </div>
-</div>
+</a>
 
-<!--<div class="container" id="nn">
-    <div class="content">
-        <h3>Collection of paper implementations/tutorials</h3>
-        <div class="subheading">Minimal implementations/tutorials with side-by-side notes; including transformers,
-            optimizers, gans, reinforcement learning, capsnet, sketch-rnn.
+<a href="https://app.labml.ai">
+    <div class="container" id="papers">
+        <img class="logo-text" src="images/logo-text.svg">
+        <div class="content">
+            <div class="subheading">Find latest and trending machine learning papers</div>
         </div>
-        <div class="action">
-            <a class="btn full lg" href="https://nn.labml.ai/">Check Now</a> <br>
+        <div class="two-col-content">
+            <img alt="Screenshot of Papers list " src="images/papers-list.png"/>
+            <img alt="Screenshot of GANs N' Roses Paper" src="images/papers-paper.png"/>
         </div>
     </div>
-</div>-->
-<div class="container" id="contact">
-    <div class="content">
-        <h3>Join our slack</h3>
-        <div class="subheading">Reach us via slack to discuss and with the developers and community</div>
+</a>
+
+<a href="https://app.labml.ai">
+    <div class="container" id="consultancy">
+        <img class="logo-text" src="images/logo-text.svg">
+        <div class="content">
+            <div class="subheading">Engineering consultations for AI teams</div>
+        </div>
+        <div class="content">
+            <img alt="Screenshots of Web App" class="padded" src="images/consult.jpg"/>
+        </div>
     </div>
-</div>
+</a>
 
 <footer class="container">
     <div class="row">
