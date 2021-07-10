@@ -207,7 +207,7 @@ a:hover, a:hover div {
 }
 
 a:hover .color-primary {
-    color: var(--accent-primary-hover);
+    color: var(--typography-primary-hover);
 }
 
 a:hover .title {
@@ -221,11 +221,11 @@ a:hover .description {
 /* Font Awesome */
 
 .fas, .fab {
-    color: var(--accent-primary);
+    color: var(--typography-primary);
 }
 
 a:hover .fas, a:hover .fab {
-    color: var(--accent-primary-hover);
+    color: var(--typography-primary-hover);
 }
 
 .f-60 {
