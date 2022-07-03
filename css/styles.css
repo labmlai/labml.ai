@@ -128,7 +128,7 @@ footer .row {
 
 header {
     height: auto;
-    max-height: 46vh;
+    max-height: 48vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -506,7 +506,7 @@ img.padded {
 
 @media screen and (max-height: 700px) {
     header {
-        max-height: 340px;
+        max-height: 360px;
     }
 }
 
