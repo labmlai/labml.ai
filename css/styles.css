@@ -56,10 +56,14 @@ html * {
     width: 100%;
 }
 
-.two-col-content > img {
+.two-col-content > img, .two-col-content > picture {
     width: 50%;
     margin: 0 -10px;
     box-sizing: border-box;
+}
+
+.two-col-content > picture > img {
+    width: 100%;
 }
 
 .content-row {
@@ -133,6 +137,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    max-width: 1220px !important;
 }
 
 header .content {
@@ -260,7 +265,7 @@ a:hover .fas, a:hover .fab {
     display: block;
     color: var(--typography-secondary);
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
     font-size: 18px;
     line-height: 18px;
     font-weight: 500;
@@ -343,7 +348,26 @@ img.padded {
 
 
 /* Responsive Adjustment */
+@media screen and (max-width: 1200px) {
+    .logo-text {
+        width: 88px;
+    }
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
 @media screen and (max-width: 950px) {
+    header.container {
+        padding-bottom: 0;
+    }
+
     .navbar a {
         display: none;
     }
@@ -353,7 +377,12 @@ img.padded {
         display: block;
     }
 
+    .navbar {
+        display: none;
+    }
+
     .navbar.responsive {
+        display: flex;
         position: relative;
         padding: 0;
     }
@@ -379,9 +408,13 @@ img.padded {
         flex-direction: column;
     }
 
-    .two-col-content > img {
+    .two-col-content > img, .two-col-content > picture {
         width: 100%;
         margin: -10px 0;
+    }
+
+    .two-col-content > picture > img {
+        margin: -20px 0;
     }
 
     .content {
