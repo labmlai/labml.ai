@@ -417,6 +417,18 @@ img.padded {
         margin: -20px 0;
     }
 
+    #promptArt .two-col-content > picture {
+        margin: 0;
+    }
+
+    .app-store-link {
+        margin-bottom: 1.2em;
+    }
+
+    .app-store-link .app-store-icon {
+        height: 50px !important;
+    }
+
     .content {
         padding: 0;
     }
@@ -630,7 +642,7 @@ code.hljs {
     margin-top: auto;
 }
 
-.app-store-link{
+.app-store-link {
     display: block;
     margin-top: 1.2em;
 }
