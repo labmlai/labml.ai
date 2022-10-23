@@ -629,3 +629,14 @@ code.hljs {
     padding-bottom: 8px;
     margin-top: auto;
 }
+
+.app-store-link{
+    display: block;
+    margin-top: 1.2em;
+}
+
+.app-store-link .app-store-icon {
+    height: 60px;
+    display: block;
+    width: 100%;
+}
