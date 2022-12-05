@@ -1,1 +1,2 @@
+applovin.com, 47c63f6d11934f1578dd0124cc04ab44, DIRECT
 google.com, pub-6939588842021043, DIRECT, f08c47fec0942fa0
