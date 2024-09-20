@@ -34,7 +34,7 @@ html * {
     max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
-    padding: 25px 0;
+    padding: 25px 10px;
     text-align: center;
 }
 
@@ -193,6 +193,14 @@ h3 {
     /*margin-top: 30px;*/
     text-align: center;
     line-height: 1.2;
+}
+
+.heading-description {
+    max-width: 80%;
+    color: var(--typography-secondary);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 a.subheading {
@@ -430,7 +438,7 @@ img.padded {
     }
 
     .content {
-        padding: 0;
+        padding: 0 10px;
     }
 
     .subheading {
@@ -651,4 +659,186 @@ code.hljs {
     height: 60px;
     display: block;
     width: 100%;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .side-by-side {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+code {
+    background-color: rgb(49, 49, 49) !important;
+    box-shadow: 1px 1px 2px 1px black;
+    border: 1px solid var(--accent-secondary);
+    border-left: none;
+    flex: 1;
+    overflow: hidden;
+    font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    font-weight: bold;
+}
+
+.text {
+    color: var(--typography-secondary);
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+}
+
+pre {
+    width: 100%;
+}
+
+code {
+    width: 100%;
+}
+
+.tracker-sample{
+    background-image: url('../images/experiment.png');
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Feature styles */
+
+.feature-list {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.feature-list h2 {
+    text-align: left;
+    color: var(--typography-primary);
+    margin-bottom: 20px;
+}
+
+.feature-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: var(--typography-primary);
+    transition: color 0.3s ease;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.feature-item:hover h3 {
+    color: var(--accent-primary);
+}
+
+.feature-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    font-size: 14px;
+    color: var(--typography-secondary);
+    text-align: left;
+}
+
+.feature-item.active .feature-description {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    #features.side-by-side {
+        flex-direction: column;
+    }
+
+    .feature-list {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.subheading {
+    margin-top: 60px;
+}
+
+.btn.capsule {
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 50px; /* Capsule shape */
+    background-color: #011627; /* Black background */
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 60px 0px;
+}
+
+.btn.capsule:hover {
+    background-color: #333; /* Darker shade on hover */
+}
+
+.btn.capsule .fab {
+    margin-right: 8px; /* Space between icon and text */
+    color: white;
+}
+
+/* Add this to your existing CSS file */
+.link {
+    font-size: 1.5em; /* Adjust font size */
+    margin: 10px; /* Add margin for spacing */
+    color: var(--typography-primary);/* Link color */
+    text-decoration: none; /* Remove underline */
+    display: inline-flex; /* Align items side by side */
+    align-items: center; /* Center icon and text */
+    font-weight: bold;
+}
+
+.link:hover {
+    color: var(--typography-primary-hover);
+}
+
+.link .fas {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+a .fas {
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+#documentation {
+    margin-top: 60px;
 }
