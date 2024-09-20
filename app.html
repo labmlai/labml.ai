@@ -109,18 +109,21 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <header class="container">
-    <img class="mobile logo-text" src="images/logo-text.svg">
+  <img class="mobile logo-text" src="images/logo-text.svg">
     <a class="navbar-icon" href="javascript:void(0);" onclick="triggerNavBar()">&#9776;</a>
     <nav class="navbar" id="topNav">
         <div class="left">
             <!--                <img class="logo-icon" src="images/logo.svg">-->
-            <img class="logo-text" src="images/logo-text.svg">
+            
+            <a href="/">
+                <img class="logo-text" src="images/logo-text.svg">
+            </a>
         </div>
         <div class="right">
             <!--            <a href="#papers">Research Papers</a>-->
-            <a href="#nn">Paper Implementations</a>
-            <a href="#app">Training Monitoring</a>
-            <a href="#discontinued">Discontinued Projects</a>
+            <a href="#quickstart">Quick Start</a>
+            <a href="#features">Features</a>
+            <a href="https://docs.labml.ai/index.html">Docs <span class="fas fa-external-link-alt"></span> </a>
             <a href="#contact">Contact</a>
         </div>
         <!--<div class="right">
@@ -130,67 +133,109 @@
     </nav>
 </header>
 
-<a href="/app#quickstart">
+<a href="https://github.com/labmlai/labml">
     <div class="container" id="app">
         <!--        <img class="logo-icon" src="images/logo.svg">-->
         <div class="content">
             <div class="subheading">Monitor deep learning model training and hardware usage from your mobile phone.
             </div>
+            
         </div>
         <div class="content">
             <img alt="Screenshots of Web App" src="images/cover-dark.png"/>
         </div>
-    </div>
-</a>
 
-<a href="https://nn.labml.ai">
-    <div class="container" id="nn">
-        <!--        <img class="logo-text" src="images/logo.svg">-->
+
         <div class="content">
-            <div class="subheading">Annotated PyTorch Paper Implementations</div>
-        </div>
-        <div class="two-col-content">
-            <img alt="Screenshot of CFR" src="images/nn1.png"/>
-            <img alt="Screenshot of StyleGan Implementation" src="images/nn2.png"/>
+            <a class="btn capsule" href="https://github.com/labmlai/labml" target="_blank">
+                <span class="fab fa-github"></span> GitHub
+            </a>
         </div>
     </div>
 </a>
 
-<div class="container" id="discontinued">
+<div class="container" id="quickstart">
     <div class="content">
-        <div class="subheading"><b>Discontinued Projects</b></div>
+        <div class="subheading"><b>Quick Start</b></div>
     </div>
 </div>
 
-
-<div class="container" id="papers">
-    <!--        <img class="logo-text" src="images/logo-text.svg">-->
+<div class="container side-by-side content" id="quickstart">
     <div class="content">
-        <div class="subheading">Find latest and trending machine learning papers</div>
+        <p class="text">Install the LabML App</p>
+        <pre><code>
+# Install the app
+pip install labml-app<br><br>
+# Start the server
+labml app-server
+        </code></pre>
+
+        <p class="text">Run an experiment</p>
+        <pre><code>
+from labml import tracker, experiment
+
+with experiment.record(name='sample', exp_conf={}, app_url=''):
+    for i in range(50):
+        loss = train()
+        tracker.save(i, {'loss': loss})
+        </code></pre>
     </div>
-    <div class="two-col-content">
-        <img alt="Screenshot of Papers list " src="images/papers-list.png"/>
-        <img alt="Screenshot of GANs N' Roses Paper" src="images/papers-paper.png"/>
+    <div class="content">
+        <div class="tracker-sample"></div>
     </div>
 </div>
 
-
-<div class="container" id="promptArt">
-    <!--        <img class="logo-text" src="images/logo.svg">-->
+<div class="container" id="">
     <div class="content">
-        <div class="subheading">PromptArt</div>
+        <div class="heading-description">
+            A powerful, open-source platform that helps you monitor deep learning experiments and hardware usage seamlessly, accessible from any device. Self-hosted for complete control.
+        </div>
     </div>
-    <div class="two-col-content">
-        <picture>
-            <source type="image/webp" srcset="images/promptart-feed.webp">
-            <source type="image/png" srcset="images/promptart-feed.png">
-            <img alt="Screenshot of the feed page of PromptArt" src="images/promptart-feed.png"/>
-        </picture>
-        <picture>
-            <source type="image/webp" srcset="images/promptart-generate.webp">
-            <source type="image/png" srcset="images/promptart-generate.png">
-            <img alt="Screenshot of the generate page of PromptArt" src="images/promptart-generate.png"/>
-        </picture>
+</div>
+
+<!-- Features here -->
+<div class="container" id="features">
+    <div class="content">
+        <div class="subheading"><b>Features</b></div>
+    </div>
+</div>
+
+<div class="container side-by-side content" id="features">
+    <div class="content feature-list">
+        <ul>
+            <li class="feature-item active" data-feature="realtime">
+                <h3>Real-Time Monitoring Anywhere</h3>
+                <p class="feature-description">Track experiment results, hardware usage, and performance metrics in real-time from any device, including mobile and laptops.</p>
+            </li>
+            <li class="feature-item" data-feature="integration">
+                <h3>Simple Integration & Distributed Support</h3>
+                <p class="feature-description">Add just two lines of code to start tracking metrics like loss and accuracy, with built-in support for distributed training across multiple machines.</p>
+            </li>
+            <li class="feature-item" data-feature="customizable">
+                <h3>Customizable & Comparative Visualizations</h3>
+                <p class="feature-description">Create custom charts and compare performance across multiple runs, offering detailed insights into your experiments' progress.</p>
+            </li>
+            <li class="feature-item" data-feature="tracking">
+                <h3>Comprehensive Experiment Tracking</h3>
+                <p class="feature-description">Track hyperparameters, Git commits, and other experiment details, ensuring full transparency and reproducibility for your projects.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="content feature-image">
+        <img id="feature-image" src="images/realtime.png" alt="Feature Image">
+    </div>
+</div>
+
+<div class="container" id="documentation">
+    <div class="content">
+        <!-- <a class="link" href="#tutorials">
+            Tutorials
+            <span class="fas fa-external-link-alt"></span>
+        </a> -->
+        <a class="link" href="https://docs.labml.ai/index.html">
+            Documentation
+            <span class="fas fa-external-link-alt"></span>
+        </a>
     </div>
 </div>
 
