@@ -842,3 +842,17 @@ a .fas {
 #documentation {
     margin-top: 60px;
 }
+
+.gif {
+    max-width: 70%;
+    height: auto;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .gif {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
