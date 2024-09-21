@@ -173,7 +173,8 @@ labml app-server
         <p class="text">Run an experiment</p>
         <pre><code>
 from labml import tracker, experiment
-
+# set app url to the url of labml app-server
+# i.e. http://localhost:5005/api/v1/track
 with experiment.record(name='sample', exp_conf={}, app_url=''):
     for i in range(50):
         loss = train()
